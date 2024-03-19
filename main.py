@@ -9,7 +9,7 @@ serverPort = 8080
 class MyServer(BaseHTTPRequestHandler):
 
     def __get_html_content(self):
-        with open('index.html') as file:
+        with open('index.html', 'r', encoding='utf-8') as file:
             html_content = file.read()
         return html_content
 
